@@ -37,6 +37,41 @@ variable "boolean" {
   default            = true
 }
 
-output "data-types" {
+output "Data-types" {
   value              = "string = ${var.string}, Number = ${var.number}, Boolean = ${var.boolean}"
 }
+
+##Variables Types
+variable "Training" {
+  default = "DevOps"
+}
+
+#List
+variable "Trainings" {
+  default = ["AWS", "DevOps"]
+}
+#Map
+variable "Training-Details" {
+  default = {
+    AWS = "6AM IST"
+    DevOps = "8AM IST"
+  }
+}
+
+output "Training" {
+  value = var.Training
+}
+
+output "FIRST-TRANING" {
+  value = var.Training-Details[0]
+}
+
+output "SECOND-TRAINING" {
+  value = var.Training-Details[1]
+}
+
+output "TRAINING-DETAILS" {
+  value = "AWS TIMING - ${var.Training-Details["AWS"]}, DevOps Timing - ${var.Training-Details["DevOps"]}"
+}
+
+
