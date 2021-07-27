@@ -63,11 +63,11 @@ output "Training" {
 }
 
 output "FIRST-TRANING" {
-  value = var.Training-Details[0]
+  value = var.Trainings[0]
 }
 
 output "SECOND-TRAINING" {
-  value = var.Training-Details[1]
+  value = var.Trainings[1]
 }
 
 output "TRAINING-DETAILS" {
