@@ -22,10 +22,10 @@ output "sample2" {
 //Terraform string should be quoted in double quotes,
 //but whereas numbers and booleans need not to be.
 
-# String Data type
-variable "string" {
-  default = "Hello World"
-}
+//# String Data type
+//variable "string" {
+//  default = "Hello World"
+//}
 
 # Number data type
 variable "number" {
