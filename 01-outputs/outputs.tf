@@ -5,3 +5,7 @@ output "out1" {
 output "out2" {
   value = "hello world for terraform"
 }
+
+output "out3" {
+  value = "helllllllllooooooooooo"
+}
