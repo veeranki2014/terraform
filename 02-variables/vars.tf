@@ -16,27 +16,27 @@ output "sample1" {
 variable "sample21" {}
 
 output "sample2" {
-  value = var.sample21
+  value           = var.sample21
 }
 
 //Terraform string should be quoted in double quotes,
 //but whereas numbers and booleans need not to be.
 
-//# String Data type
-//variable "string" {
-//  default = "Hello World"
-//}
+#String Data type
+variable "string" {
+  default           = "Hello World"
+}
 
 # Number data type
 variable "number" {
-  default = 100
+  default           = 100
 }
 
 # Boolean Data type
 variable "boolean" {
-  default = true
+  default            = true
 }
 
 output "data-types" {
-  value = "string = ${var.string}, Number = ${var.number}, Boolean = ${var.boolean}"
+  value              = "string = ${var.string}, Number = ${var.number}, Boolean = ${var.boolean}"
 }
