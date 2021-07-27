@@ -85,5 +85,12 @@ output "FRUITS" {
   value = var.FRUITS
 }
 
+###Comand line
+
+variable "COUNTRY" {}
+output "COUNTRY" {
+  value = var.COUNTRY
+}
+
 
 
