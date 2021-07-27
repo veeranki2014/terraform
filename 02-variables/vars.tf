@@ -13,8 +13,8 @@ output "sample1" {
 //variable if it is combined with some other string then we have to use ${} interpolation for variable access.
 
 
-variable "sample2" {}
+variable "sample21" {}
 
 output "sample2" {
-  value = var.sample2
+  value = var.sample21
 }
