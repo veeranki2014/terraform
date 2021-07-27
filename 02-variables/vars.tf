@@ -10,6 +10,6 @@ output "sample1" {
   value = "${var.sample}"
 }
 
-output "sample2" {
+output "sample3" {
   value = var.sample
 }
