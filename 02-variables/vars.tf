@@ -74,4 +74,16 @@ output "TRAINING-DETAILS" {
   value = "AWS TIMING - ${var.Training-Details["AWS"]}, DevOps Timing - ${var.Training-Details["DevOps"]}"
 }
 
+#so far we have declared value with in variable block.
+#Now data comes from different sources.
+
+// variable from tfvars
+variable "FRUITS" {
+}
+
+output "FRUITS" {
+  value = var.FRUITS
+}
+
+
 
