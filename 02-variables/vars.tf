@@ -23,16 +23,20 @@ output "sample2" {
 //but whereas numbers and booleans need not to be.
 
 # String Data type
-variable "sample1" {
+variable "string" {
   default = "Hello World"
 }
 
 # Number data type
-variable "sample2" {
+variable "number" {
   default = 100
 }
 
 # Boolean Data type
-variable "sample3" {
+variable "boolean" {
   default = true
+}
+
+output "data-types" {
+  value = "string = ${var.string}, Number = ${var.number}, Boolean = ${var.boolean}"
 }
