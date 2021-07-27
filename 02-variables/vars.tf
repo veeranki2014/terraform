@@ -3,13 +3,13 @@ variable "sample" {
 }
 
 output "sample" {
-  value = var.sample
+  value           = var.sample
 }
+
 
 output "sample1" {
-  value = "${var.sample}"
+  value           = "${var.sample} - from terraform"
 }
+//variable if it is combined with some other string then we have to use ${} interpolation for variable access.
 
-output "sample3" {
-  value = var.sample
-}
+
