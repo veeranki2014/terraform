@@ -92,5 +92,10 @@ output "COUNTRY" {
   value = var.COUNTRY
 }
 
+####sHELL
+variable "SEASON" {}
+output "SEASON" {
+  value = var.SEASON
+}
 
 
