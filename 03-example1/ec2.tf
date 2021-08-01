@@ -1,9 +1,10 @@
 resource "aws_instance" "sample" {
-  ami               = "ami-074df373d6bafa625"
-  instance_type     = "t3.micro"
+  ami                     = "ami-074df373d6bafa625"
+  instance_type           = "t3.micro"
+  vpc_security_group_ids  = [aws_security_group.allow_ssh.id]
 
   tags = {
-    Name = "sample"
+    Name            = "sample"
   }
 }
 
@@ -33,9 +34,9 @@ resource "aws_security_group" "allow_ssh" {
 //  value               = aws_security_group.allow_ssh
 //}
 
-output "ec2-attribute" {
-  value               = aws_instance.sample
-}
+//output "ec2-attribute" {
+//  value               = aws_instance.sample
+//}
 provider "aws" {
   region              = "us-east-1"
 }
