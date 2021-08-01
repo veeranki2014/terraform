@@ -1,11 +1,11 @@
-//resource "aws_instance" "sample" {
-//  ami               = "ami-074df373d6bafa625"
-//  instance_type     = "t3.micro"
-//
-//  tags = {
-//    Name = "sample"
-//  }
-//}
+resource "aws_instance" "sample" {
+  ami               = "ami-074df373d6bafa625"
+  instance_type     = "t3.micro"
+
+  tags = {
+    Name = "sample"
+  }
+}
 
 resource "aws_security_group" "allow_ssh" {
   name                = "allow_ssh"
@@ -29,8 +29,12 @@ resource "aws_security_group" "allow_ssh" {
   }
 }
 
-output "sg-attribute" {
-  value               = aws_security_group.allow_ssh
+//output "sg-attribute" {
+//  value               = aws_security_group.allow_ssh
+//}
+
+output "ec2-attribute" {
+  value               = aws_instance.sample
 }
 provider "aws" {
   region              = "us-east-1"
