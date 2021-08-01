@@ -18,20 +18,20 @@ resource "aws_security_group" "allow_ssh" {
     protocol          = "tcp"
     cidr_blocks       = ["0.0.0.0/0"]
   }
-
   egress {
     from_port         = 0
     to_port           = 0
     protocol          = "-1" #its allow all ports 0 to 65535
     cidr_blocks       = ["0.0.0.0/0"]
-
   }
-
   tags = {
     Name              = "allow_tls"
   }
 }
 
 output "sg-attribute" {
-  value = aws_security_group.allow_ssh
+  value               = aws_security_group.allow_ssh
+}
+provider "aws" {
+  region              = "us-east-1"
 }
