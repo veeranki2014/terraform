@@ -5,7 +5,7 @@ resource "aws_instance" "sample" {
   vpc_security_group_ids  = [var.SG_ID]
 
   tags = {
-    Name            = "sample"
+    Name            = count.index
   }
 }
 
@@ -16,6 +16,6 @@ variable "TYPE" {}
 //  value = aws_instance.sample.instance_type
 //}
 
-//output "PRIVATE_IP" {
-//  value = "aws_instance.sample.private_ip"
-//}
+output "PRIVATE_IP" {
+  value = "aws_instance.sample.private_ip"
+}
