@@ -5,7 +5,7 @@ resource "aws_instance" "sample" {
   #vpc_security_group_ids  = [aws_security_group.allow_ssh.id]
 
   tags = {
-    Name            = "sample"
+    Name            = "sample${count.index}"
   }
 }
 
