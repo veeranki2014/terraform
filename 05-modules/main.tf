@@ -6,7 +6,7 @@ module "ec2" {
   depends_on        = [module.sg]
   source            = "./ec2"
   SG_ID             = module.sg.SG_ID
-  TYPE              = "t3.small"
+//  TYPE              = "t3.small"
 }
 
 provider "aws" {
