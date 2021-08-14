@@ -12,9 +12,9 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "terraform-anka-devops"
-    key    = "sample/terraform.tfstate"
-    region = "us-east-1"
-    dynamodb_table = "terraform"
+    bucket                = "terraform-anka-devops"
+    key                   = "sample/terraform.tfstate"
+    region                = "us-east-1"
+    dynamodb_table        = "terraform"
   }
 }
