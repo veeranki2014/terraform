@@ -42,7 +42,7 @@ resource "null_resource" "run-shell-scripting" {
       "git clone https://DevOps-Batches@dev.azure.com/DevOps-Batches/DevOps57/_git/shell-scripting",
       "cd shell-scripting/roboshop",
       "git pull",
-      "sudo make ${element(var.COMPONENTS,count.index)}"
+      "sudo make ${element(var.COMPONENTS, count.index)}"
       ]
     }
 }
