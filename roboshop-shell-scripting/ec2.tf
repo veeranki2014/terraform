@@ -29,7 +29,7 @@ resource "aws_route53_record" "records" {
 }
 
 resource "null_resource" "run-shell-scripting" {
-  depends_on              = [aws_route53_record.records.records]
+  depends_on              = [aws_route53_record.records]
   provisioner "remote-exec" {
     connection {
       count               = local.LENGTH
