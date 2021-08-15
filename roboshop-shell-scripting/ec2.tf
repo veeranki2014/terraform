@@ -18,6 +18,6 @@ resource "aws_ec2_tag" "name-tag" {
   value                 = element(var.COMPONENTS,count.index)
 }
 
-output "out" {
-  value = element(aws_spot_instance_request.cheap_worker.*.spot_instance_id, count.index)
-}
+//output "out" {
+//  value = element(aws_spot_instance_request.cheap_worker.*.spot_instance_id, count.index)
+//}
