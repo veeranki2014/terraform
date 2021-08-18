@@ -6,5 +6,9 @@ data "aws_ami" "example" {
 }
 
 output "amis" {
-  value = data.aws_ami.example.id
+  value                 = data.aws_ami.example.id
+}
+
+provider "aws" {
+  region                = "us-east-1a"
 }
