@@ -9,6 +9,6 @@ output "amis" {
   value                 = data.aws_ami.example.id
 }
 
-provider "AWS" {
-  region                = "us-east-1a"
+provider "aws" {
+  region                = "us-east-1"
 }
