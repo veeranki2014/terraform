@@ -18,10 +18,10 @@ data "aws_ec2_spot_price" "example" {
 output "spot_price" {
   value = data.aws_ec2_spot_price.example.spot_price
 }
-
 output "amis" {
   value                 = data.aws_ami.example.id
 }
+
 
 provider "aws" {
   region                = "us-east-1"
