@@ -57,7 +57,7 @@
 //    DevOps = "8AM IST"
 //  }
 //}
-//
+//### Calling variable types in terraform ###############
 //output "Training" {
 //  value = var.Training
 //}
