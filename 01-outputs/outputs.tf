@@ -7,5 +7,5 @@ output "out2" {
 }
 
 output "out3" {
-  value = "heloo"
+  value = "anka"
 }
