@@ -1,0 +1,37 @@
+pipeline {
+
+    agent {
+        node { lable 'workstation'}
+    }
+
+    parameters {choice(name: 'ACTION', choices: ['APPLY', 'DESTROY'], description: 'PICK TERRAFORM ACTION')}
+
+
+    stages {
+        stage ('TERRAFORM INIT'){
+            steps {
+            sh 'cd roboshop-shell-scripting ; terraform init'
+            }
+        }
+
+         stage ('TERRAFORM APPLY'){
+                    steps {
+                    sh ...
+                    cd roboshop-shell-scripting
+                    terraform apply -auto-approve
+                    ...
+                    }
+                }
+                 }
+
+         stage ('TERRAFORM DESTROY'){
+                    steps {
+                    sh ...
+                    cd roboshop-shell-scripting
+                    terraform apply -auto-approve
+                    ...
+                }
+         }
+    }
+
+}
