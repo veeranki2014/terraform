@@ -1,7 +1,7 @@
 pipeline {
 
     agent {
-        node { lable 'workstation'}
+        node { label 'workstation'}
     }
 
     parameters {choice(name: 'ACTION', choices: ['APPLY', 'DESTROY'], description: 'PICK TERRAFORM ACTION')}
